@@ -15,10 +15,11 @@ reddit = praw.Reddit(
 app = Flask(__name__)
 
 
-@app.route('/')
-def supreddit(*, post="memes", limit=10):
+@app.route('/reddit=<post>+<limit>')
+def supreddit(post, limit):
     """Gets memes from reddit"""
 
+    limit = int(limit)
     subreddit = reddit.subreddit(post)
     tops = subreddit.top(limit=limit)
 
@@ -38,7 +39,7 @@ def supreddit(*, post="memes", limit=10):
             reddit.config.reddit_url+i.permalink)
         result[str(i.title)]["Image_URL"] = str(i.url)
 
-    return json.dumps(result, indent=4)
+    return result
 
 
 if __name__ == "__main__":
