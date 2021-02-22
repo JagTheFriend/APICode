@@ -1,3 +1,6 @@
 {
-    "python.pythonPath": "c:\\Users\\devi\\Desktop\\Rahul\\PythonCoding\\The_Interpreter_For_This_Folder\\Scripts\\python.exe"
+    "python.pythonPath": "c:\\Users\\devi\\Desktop\\Rahul\\PythonCoding\\The_Interpreter_For_This_Folder\\Scripts\\python.exe",
+    "cSpell.words": [
+        "praw"
+    ]
 }
