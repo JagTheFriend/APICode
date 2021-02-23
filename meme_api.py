@@ -1,7 +1,10 @@
+# necessary imports
 from flask import Flask
 import praw
 import os
-import json
+
+# project imports
+import compiler_api
 
 # The bot is logging in
 reddit = praw.Reddit(
@@ -17,9 +20,19 @@ app = Flask(__name__)
 
 @app.route('/reddit=<post>+<limit>')
 def supreddit(post, limit):
-    """Gets memes from reddit"""
+    """Gets memes from reddit
 
-    limit = int(limit)
+    Arguments:
+    @post => Name of the subreddit
+    @limit => Number of results to be returned
+
+    :return: Python dictionary"""
+
+    if str(limit).isdigit():
+        limit = int(limit)
+    else:
+        return {"Error": "Please give a number got the limit of subreddits to be returned"}
+
     subreddit = reddit.subreddit(post)
     tops = subreddit.top(limit=limit)
 
@@ -40,6 +53,18 @@ def supreddit(post, limit):
         result[str(i.title)]["Image_URL"] = str(i.url)
 
     return result
+
+
+@app.route('/compile=<lang>+<code>')
+def compile(lang, code):
+    """To allow users to run code
+    Arguments:
+    @code => Code to be compiled and ran
+    @lang => The langage used for compiling the code
+
+    :return: Python dictionary"""
+
+    return compiler_api._compile(lang=lang, code=code)
 
 
 if __name__ == "__main__":
