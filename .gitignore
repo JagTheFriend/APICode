@@ -1,2 +1,6 @@
 .vscode/
 .env
+compiler_api.py
+compile.txt
+output.txt
+test.py
