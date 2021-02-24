@@ -5,8 +5,19 @@ from flask import Flask
 import compiler_api
 import meme_api
 
-
 app = Flask(__name__)
+
+
+@app.route('/')
+def main():
+    """A main function
+    which handles the main `index` page
+
+    So, the wouldn't get a 404 page if they
+    try to go the main page"""
+
+    return "Im doing smth sus"
+
 
 @app.route('/reddit=<post>+<limit>')
 def supreddit(post, limit):
@@ -28,9 +39,8 @@ def compile(lang, code):
     @lang => The langage used for compiling the code
 
     :return: Python dictionary"""
-
     return compiler_api._compile(lang=lang, code=code)
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=6969, debug=False)
+    app.run(host='0.0.0.0', port=6969, debug=True)
