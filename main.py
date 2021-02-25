@@ -8,6 +8,7 @@ import lyrics_api
 
 app = Flask(__name__)
 
+MAIN_API_URL = "https://apis.theunkowncoder.repl.co/"
 
 @app.route('/')
 def main():
