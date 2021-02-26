@@ -79,6 +79,12 @@ def _compile(*, lang: str, code: str = ""):
 
     result = {}
     result["output"] = ""
+    
+    # check whether the lang is valid or not
+    if lang not in [i.split("Language Name: ")[-1].split(")")[0] for i in LANGUAGES]:
+        result["output"] = "Language not recognized"
+        result["SupportedLanguages"] = LANGUAGES
+        return result
 
     _code = prepare_input(code)  # getting the code
 
