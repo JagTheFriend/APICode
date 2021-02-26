@@ -22,7 +22,7 @@ def supreddit(*, post, limit):
     if str(limit).isdigit():
         limit = int(limit)
     else:
-        return {"Error": "Please give a number got the limit of subreddits to be returned"}
+        return {"Error": "Please give a number for the number of posts to be returned"}
 
     subreddit = reddit.subreddit(post)
     tops = subreddit.top(limit=limit)
