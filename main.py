@@ -25,8 +25,8 @@ def main():
 def supreddit(post, limit):
     """Gets a posts from reddit
     Arguments:
-    @post => Subreddit
-    @limit => Total number of posts to be returned
+    :param post: Subreddit
+    :param limit: Total number of posts to be returned
 
     :return: Python dictionary"""
 
@@ -37,8 +37,8 @@ def supreddit(post, limit):
 def compile(lang, code):
     """To allow users to run code
     Arguments:
-    @code => Code to be compiled and ran
-    @lang => The langage used for compiling the code
+    :param code: Code to be compiled and ran
+    :param lang: The langage used for compiling the code
 
     :return: Python dictionary"""
     return compiler_api._compile(lang=lang, code=code)
@@ -49,7 +49,7 @@ def lyrics(song):
     """Gets the lyrics of a song
 
     Arguments:
-    @lyrics => Name of the lyrics
+    :param lyrics: Name of the lyrics
 
     :return: Python dictionary"""
 

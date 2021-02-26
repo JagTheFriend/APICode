@@ -4,8 +4,7 @@ from lyrics_extractor import SongLyrics
 def song_lyrics(song):
     """Gets the lyrics of a song
 
-    Arguments:
-    @song => Name of the song
+    :param song: Name of the song
 
     :return: Python dictionary"""
     

@@ -68,18 +68,19 @@ def prepare_input(code: str) -> str:
     except Exception:
         code = "No_code"
         return code
-        
+
+
 def _compile(*, lang: str, code: str = ""):
     """To allow users to run code
-    Arguments:
-    @code => Code to be compiled and ran
-    @lang => The langage used for compiling the code
+
+    :param code: Code to be compiled and ran
+    :param lang: The langage used for compiling the code
 
     :return: Python dictionary"""
 
     result = {}
     result["output"] = ""
-    
+
     # check whether the lang is valid or not
     if lang not in [i.split("Language Name: ")[-1].split(")")[0] for i in LANGUAGES]:
         result["output"] = "Language not recognized"

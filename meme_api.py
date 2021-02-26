@@ -14,9 +14,8 @@ reddit = praw.Reddit(
 def supreddit(*, post, limit):
     """Gets memes from reddit
 
-    Arguments:
-    @post => Name of the subreddit
-    @limit => Number of results to be returned
+    :param post: Name of the subreddit
+    :param limit: Number of results to be returned
 
     :return: Python dictionary"""
 
