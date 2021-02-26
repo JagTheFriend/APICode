@@ -1,6 +1,10 @@
+# vscode settings
 .vscode/
+
+# tokens
 .env
-compiler_api.py
+
+# test files
 compile.txt
 output.txt
 test.py
