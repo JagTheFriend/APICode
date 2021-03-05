@@ -1,5 +1,5 @@
 import os
-import wandbox as w
+import wandbox as wand
 import re
 import textwrap
 
@@ -33,7 +33,7 @@ LANGUAGES = [
     "Haskell(Language Name: ghc)",
     "Java(Language Name: java)",
 
-    "JavaScript(Language Name: javascript)",
+    "JavaScript(Language Name: js)",
     "Nim(Language Name: nim)",
     "Python(LanguageName: python)",
     "Ruby(Language Name: ruby)",
@@ -72,24 +72,27 @@ def prepare_input(code: str) -> str:
 
 def _compile(*, lang: str, code: str = ""):
     """To allow users to run code
-
     :param code: Code to be compiled and ran
     :param lang: The langage used for compiling the code
-
     :return: Python dictionary"""
 
     result = {}
     result["output"] = ""
 
+    if lang == "support":
+        result["SupportedLanguages"] = LANGUAGES
+        return result
+
     # check whether the lang is valid or not
-    if lang not in [i.split("Language Name: ")[-1].split(")")[0] for i in LANGUAGES]:
+    if lang not in [i.split(":")[-1].strip(" ").strip(")") for i in LANGUAGES]:
         result["output"] = "Language not recognized"
         result["SupportedLanguages"] = LANGUAGES
         return result
 
     _code = prepare_input(code)  # getting the code
-
-    if not _code:  # no code is given
+    
+    print(_code)
+    if _code == "No_code":  # no code is given
         result["output"] = "Please send the code to be run"
         return result
 
