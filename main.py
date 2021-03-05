@@ -12,21 +12,21 @@ MAIN_API_URL = "https://apis.theunkowncoder.repl.co/"
 
 @app.route('/')
 def main():
-    """A main function
+    """A main function  
     which handles the main `index` page
 
     So, the wouldn't get a 404 page if they
     try to go the main page"""
 
-    return "Im doing smth sus"
+    return "Providing service to other user(s) <br> Here my code: <a href='https://github.com/JagTheFriend/APICode'> Click me </a>"
 
 
 @app.route('/reddit=<post>+<limit>')
 def supreddit(post, limit):
     """Gets a posts from reddit
     Arguments:
-    :param post: Subreddit
-    :param limit: Total number of posts to be returned
+    @post => Subreddit
+    @limit => Total number of posts to be returned
 
     :return: Python dictionary"""
 
@@ -37,8 +37,8 @@ def supreddit(post, limit):
 def compile(lang, code):
     """To allow users to run code
     Arguments:
-    :param code: Code to be compiled and ran
-    :param lang: The langage used for compiling the code
+    @code => Code to be compiled and ran
+    @lang => The langage used for compiling the code
 
     :return: Python dictionary"""
     return compiler_api._compile(lang=lang, code=code)
@@ -49,7 +49,7 @@ def lyrics(song):
     """Gets the lyrics of a song
 
     Arguments:
-    :param lyrics: Name of the lyrics
+    @lyrics => Name of the lyrics
 
     :return: Python dictionary"""
 
