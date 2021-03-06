@@ -3,9 +3,9 @@ from flask import Flask
 
 # project imports
 import compiler_api
-import meme_api
+import reddit_api
 import lyrics_api
-from youtube_things import duration_of_a_playlist
+import duration_of_a_playlist
 
 app = Flask(__name__)
 
@@ -25,7 +25,7 @@ def main() -> str:
     return "Providing service to other user(s) <br> Here my code: <a href='https://github.com/JagTheFriend/APICode'> Click me </a>"
 
 
-@app.route('/reddit=<post>+<limit>')
+@app.route('/reddit|<post>|<limit>')
 def supreddit(post, limit) -> dict:
     """
     Gets a posts from reddit
@@ -36,10 +36,10 @@ def supreddit(post, limit) -> dict:
     :return: Python dictionary
     """
 
-    return meme_api.supreddit(post=post, limit=limit)
+    return reddit_api.supreddit(post=post, limit=limit)
 
 
-@app.route('/compile=<lang>+<code>')
+@app.route('/compile|<lang>|<code>')
 def compile(lang, code) -> dict:
     """
     To allow users to run code
@@ -53,7 +53,7 @@ def compile(lang, code) -> dict:
     return compiler_api._compile(lang=lang, code=code)
 
 
-@app.route('/lyrics=<song>')
+@app.route('/lyrics|<song>')
 def lyrics(song) -> dict:
     """
     Gets the lyrics of a song
@@ -67,7 +67,7 @@ def lyrics(song) -> dict:
     return lyrics_api.song_lyrics(song)
 
 
-@app.route('/playlist=<pl_id>')
+@app.route('/playlist|<pl_id>')
 def length(pl_id: str):
     """
     Gets the length of playlist 

@@ -82,6 +82,18 @@ name_of_subreddit = "meme"
 number_of_posts = 10
 print(f"{URL}/reddit={name_of_subreddit}+{number_of_posts}")
 ```
+## Youtube Playlist length finder API:
+<a href="https://apis.theunkowncoder.repl.co/playlist=https://www.youtube.com/playlist?list=PL59LTecnGM1OGgddJzY-0r8vdqibi3S2H">
+  Example: 
+</a>
+
+```py
+import requests as r
+
+URL = "https://apis.theunkowncoder.repl.co"
+play_list_link = "Playlist_Url" # example URL: https://apis.theunkowncoder.repl.co/playlist=https://www.youtube.com/playlist?list=PL59LTecnGM1OGgddJzY-0r8vdqibi3S2H
+print(f"{URL}/playlist={play_list_link}")
+```
 
 If you find any bugs _or have new ideas_, <br> 
 Feel free to raise a 

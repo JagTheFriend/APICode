@@ -22,7 +22,7 @@ def main(playlist_id: str) -> dict:
 
     :return: Python Dictionary
     """
-
+    playlist_id = playlist_id.split("=")[1]
     total_seconds = 0
     next_page_token = None
     while True:
