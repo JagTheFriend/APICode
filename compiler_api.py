@@ -70,11 +70,16 @@ def prepare_input(code: str) -> str:
         return code
 
 
-def _compile(*, lang: str, code: str = ""):
-    """To allow users to run code
-    :param code: Code to be compiled and ran
-    :param lang: The langage used for compiling the code
-    :return: Python dictionary"""
+def _compile(*, lang: str, code: str = "") -> dict:
+    """
+    To allow users to run code
+
+    Arguments:
+        @code => Code to be compiled and ran
+        @lang => The langage used for compiling the code
+
+    :return: Python dictionary
+    """
 
     result = {}
     result["output"] = ""
@@ -90,8 +95,6 @@ def _compile(*, lang: str, code: str = ""):
         return result
 
     _code = prepare_input(code)  # getting the code
-    
-    print(_code)
     if _code == "No_code":  # no code is given
         result["output"] = "Please send the code to be run"
         return result

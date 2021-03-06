@@ -11,24 +11,31 @@ reddit = praw.Reddit(
 )
 
 
-def supreddit(*, post, limit):
-    """Gets memes from reddit
+def supreddit(*, post, limit) -> dict:
+    """
+    Gets posts from subreddit
 
-    :param post: Name of the subreddit
-    :param limit: Number of results to be returned
+    Arguments:
+        @post => Name of the subreddit
+        @limit => Number of results to be returned
 
-    :return: Python dictionary"""
+    :return: Python dictionary
+    """
 
     if str(limit).isdigit():
         limit = int(limit)
     else:
         return {"Error": "Please give a number for the number of posts to be returned"}
 
-    subreddit = reddit.subreddit(post)
-    tops = subreddit.top(limit=limit)
-
     # to store the results
     result = {}
+    try:
+        subreddit = reddit.subreddit(post)
+    except Exception:
+        result["output"] = "No a valid subreddit"
+        return result
+
+    tops = subreddit.top(limit=limit)
 
     for i in tops:
         result[str(i.title)] = {}

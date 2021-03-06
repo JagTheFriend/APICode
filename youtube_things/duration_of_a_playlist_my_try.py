@@ -12,7 +12,17 @@ minutes_pattern = re.compile(r'(\d+)M')
 seconds_pattern = re.compile(r'(\d+)S')
 
 
-def main(playlist_id: str):
+def main(playlist_id: str) -> dict:
+    """
+    This function returns the time it would take to
+    watch an entire playlist, from the start to end
+    
+    Arguments:
+        @playlist_id => This a unique id given to each playlist
+        
+    :return: Python Dictionary
+    """
+
     total_seconds = 0
     next_page_token = None
     while True:
@@ -64,7 +74,7 @@ def main(playlist_id: str):
 
     minutes, seconds = divmod(total_seconds, 60)
     hours, minutes = divmod(minutes, 60)
-    return (f'{hours}:{minutes}:{seconds}')
+    return {"output": f'{hours} hour(s):{minutes} minute(s):{seconds} second(s)'}
 
 
 if __name__ == '__main__':

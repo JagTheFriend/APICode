@@ -1,12 +1,15 @@
 import os
 from lyrics_extractor import SongLyrics
 
-def song_lyrics(song):
-    """Gets the lyrics of a song
+def song_lyrics(song) -> dict:
+    """
+    Gets the lyrics of a song
 
-    :param song: Name of the song
+    Arguments:
+        @song => Name of the song
 
-    :return: Python dictionary"""
+    :return: Python dictionary
+    """
     
     if song:
         extract_lyrics = SongLyrics(os.environ.get(
