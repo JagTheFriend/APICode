@@ -5,6 +5,7 @@ from flask import Flask
 import compiler_api
 import meme_api
 import lyrics_api
+from youtube_things import duration_of_a_playlist
 
 app = Flask(__name__)
 
@@ -64,6 +65,20 @@ def lyrics(song) -> dict:
     """
 
     return lyrics_api.song_lyrics(song)
+
+
+@app.route('/playlist=<pl_id>')
+def length(pl_id: str):
+    """
+    Gets the length of playlist 
+
+    Arguments:
+        @playlist_id => This a unique id given to each playlist
+
+    :return: Python Dictionary
+    """
+
+    return duration_of_a_playlist.main(pl_id)
 
 
 if __name__ == "__main__":
