@@ -16,10 +16,10 @@ def main(playlist_id: str) -> dict:
     """
     This function returns the time it would take to
     watch an entire playlist, from the start to end
-    
+
     Arguments:
         @playlist_id => This a unique id given to each playlist
-        
+
     :return: Python Dictionary
     """
 
