@@ -22,10 +22,10 @@ def main() -> str:
     try to go the main page
     """
 
-    return "Providing service to other user(s) <br> Here my code: <a href='https://github.com/JagTheFriend/APICode'> Click me </a>"
+    return "Providing service to other user(s) <br> Here is my code: <a href='https://github.com/JagTheFriend/APICode'> Click me </a>"
 
 
-@app.route('/reddit|<post>|<limit>')
+@app.route('/reddit_<post>_<limit>')
 def supreddit(post, limit) -> dict:
     """
     Gets a posts from reddit
@@ -39,7 +39,7 @@ def supreddit(post, limit) -> dict:
     return reddit_api.supreddit(post=post, limit=limit)
 
 
-@app.route('/compile|<lang>|<code>')
+@app.route('/compile_<lang>_<code>')
 def compile(lang, code) -> dict:
     """
     To allow users to run code
@@ -53,7 +53,7 @@ def compile(lang, code) -> dict:
     return compiler_api._compile(lang=lang, code=code)
 
 
-@app.route('/lyrics|<song>')
+@app.route('/lyrics_<song>')
 def lyrics(song) -> dict:
     """
     Gets the lyrics of a song
@@ -67,7 +67,7 @@ def lyrics(song) -> dict:
     return lyrics_api.song_lyrics(song)
 
 
-@app.route('/playlist|<pl_id>')
+@app.route('/playlist_<pl_id>')
 def length(pl_id: str):
     """
     Gets the length of playlist 
