@@ -91,7 +91,8 @@ print(f"{URL}/reddit={name_of_subreddit}+{number_of_posts}")
 import requests as r
 
 URL = "https://apis.theunkowncoder.repl.co"
-play_list_link = "Playlist_Url" # example URL: https://apis.theunkowncoder.repl.co/playlist=https://www.youtube.com/playlist?list=PL59LTecnGM1OGgddJzY-0r8vdqibi3S2H
+# example URL: https://www.youtube.com/playlist?list=PL59LTecnGM1OGgddJzY-0r8vdqibi3S2H
+play_list_link = "Playlist_Url" 
 print(f"{URL}/playlist={play_list_link}")
 ```
 
