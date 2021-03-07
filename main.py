@@ -76,7 +76,7 @@ def ascii(text: str):
 
     Arguments:
         @text => Text to be converted to ascii art
-    
+
     :return: Python Dictionary
     """
 

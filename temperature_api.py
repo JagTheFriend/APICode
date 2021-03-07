@@ -3,6 +3,7 @@ import os
 
 appid = os.environ.get('weather')
 
+
 def temp(*, city):
     """
     It finds out the temperature of a city
