@@ -9,3 +9,6 @@ compile.txt
 output.txt
 test.py
 __pycache__/
+
+# Ignore virtual environment
+API_Runner/
