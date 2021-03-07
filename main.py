@@ -5,7 +5,8 @@ from flask import Flask
 import compiler_api
 import reddit_api
 import lyrics_api
-import duration_of_a_playlist
+import ascii_api
+import duration_of_a_playlist_api
 
 app = Flask(__name__)
 
@@ -59,7 +60,7 @@ def lyrics(song) -> dict:
     Gets the lyrics of a song
 
     Arguments:
-        @lyrics => Name of the lyrics   
+        @lyrics => Name of the lyrics
 
     :return: Python dictionary
     """
@@ -67,10 +68,15 @@ def lyrics(song) -> dict:
     return lyrics_api.song_lyrics(song)
 
 
-@app.route('/playlist_<pl_id>')
+@app.route('/ascii_<text>')
+def ascii(text: str):
+    return ascii_api.generator(text=text)
+
+
+@app.route('/length_<pl_id>')
 def length(pl_id: str):
     """
-    Gets the length of playlist 
+    Gets the length of playlist
 
     Arguments:
         @playlist_id => This a unique id given to each playlist
@@ -78,7 +84,7 @@ def length(pl_id: str):
     :return: Python Dictionary
     """
 
-    return duration_of_a_playlist.main(pl_id)
+    return duration_of_a_playlist_api.main(pl_id)
 
 
 if __name__ == "__main__":
