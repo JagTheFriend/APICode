@@ -13,7 +13,7 @@ This API supports:
 
 # Code snippets
 ## Compile API:
-<a href="https://apis.theunkowncoder.repl.co/compile_support_support">
+<a href="https://apis.theunkowncoder.repl.co/compile=python_print('This works')">
   Example:
 </a>
 
@@ -38,15 +38,18 @@ class Compiler{
     }
 }
 '''
-print(r.get(f"{URL}/compile_{lang}_{code}").text)
+print(r.get(f"{URL}/compile={lang}_{code}").text)
 ```
 
-<a href="https://apis.theunkowncoder.repl.co/compile_support_support">
+<a href="https://apis.theunkowncoder.repl.co/compile=support_support">
   Get all the supported languages here
 </a>
 
 ## Reddit API:
-Example:
+<a href="https://apis.theunkowncoder.repl.co/reddit=meme+10">
+  Example:
+</a>
+
 ```py
 import requests as r
 
@@ -54,7 +57,7 @@ URL = "https://apis.theunkowncoder.repl.co"
 # example name_of_subreddit = "meme"
 name_of_subreddit = "name_of_a_valid_subreddit" 
 number_of_posts = 10 # number of posts to be returned
-print(f"{URL}/reddit+{name_of_subreddit}+{number_of_posts}")
+print(f"{URL}/reddit={name_of_subreddit}+{number_of_posts}")
 ```
 
 ## Lyrics API:
@@ -66,12 +69,12 @@ print(f"{URL}/reddit+{name_of_subreddit}+{number_of_posts}")
 import requests as r
 
 URL = "https://apis.theunkowncoder.repl.co"
-SongName = "name_of_song"
+SongName = "name of song"
 print(f"{URL}/lyrics+{SongName}")
 ```
 
 ## Ascii Art API:
-<a href="https://apis.theunkowncoder.repl.co/playlist_PL59LTecnGM1OGgddJzY-0r8vdqibi3S2H">
+<a href="https://apis.theunkowncoder.repl.co/ascii_hello">
   Example:
 </a>
 
@@ -84,7 +87,7 @@ print(f"{URL}/ascii_{text}")
 ```
 
 ## Weather API:
-<a href="https://apis.theunkowncoder.repl.co/playlist_PL59LTecnGM1OGgddJzY-0r8vdqibi3S2H">
+<a href="https://apis.theunkowncoder.repl.co/temp+Cape Town">
   Example:
 </a>
 
@@ -98,7 +101,7 @@ print(f"{URL}/temp+{text}")
 ```
 
 ## Youtube Playlist length finder API:
-<a href="https://apis.theunkowncoder.repl.co/playlist_PL59LTecnGM1OGgddJzY-0r8vdqibi3S2H">
+<a href="https://apis.theunkowncoder.repl.co/playlist+PL59LTecnGM1OGgddJzY-0r8vdqibi3S2H">
   Example: 
 </a>
 

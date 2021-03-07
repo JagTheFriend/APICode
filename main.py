@@ -26,22 +26,7 @@ def main() -> str:
 
     return "Providing service to other user(s) <br> Here is my code: <a href='https://github.com/JagTheFriend/APICode'> Click me </a>"
 
-
-@app.route('/reddit+<post>+<limit>')
-def supreddit(post, limit) -> dict:
-    """
-    Gets a posts from reddit
-    Arguments:
-        @post => Subreddit
-        @limit => Total number of posts to be returned
-
-    :return: Python dictionary
-    """
-
-    return reddit_api.supreddit(post=post, limit=limit)
-
-
-@app.route('/compile+<lang>_<code>')
+@app.route('/compile=<lang>_<code>')
 def compile(lang, code) -> dict:
     """
     To allow users to run code
@@ -54,6 +39,20 @@ def compile(lang, code) -> dict:
     """
 
     return compiler_api._compile(lang=lang, code=code)
+
+    
+@app.route('/reddit=<post>+<limit>')
+def supreddit(post, limit) -> dict:
+    """
+    Gets a posts from reddit
+    Arguments:
+        @post => Subreddit
+        @limit => Total number of posts to be returned
+
+    :return: Python dictionary
+    """
+
+    return reddit_api.supreddit(post=post, limit=limit)
 
 
 @app.route('/lyrics+<song>')
