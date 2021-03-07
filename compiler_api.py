@@ -43,7 +43,9 @@ LANGUAGES = [
 
 
 def prepare_input(code: str) -> str:
-    """Returns the code"""
+    """
+    Returns the code to be run
+    """
 
     # easiest way to fix the bug:
     try:

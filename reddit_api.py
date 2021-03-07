@@ -13,7 +13,7 @@ reddit = praw.Reddit(
 
 def supreddit(*, post, limit) -> dict:
     """
-    Gets posts from subreddit
+    Gets a certain number of posts from a subreddit
 
     Arguments:
         @post => Name of the subreddit

@@ -51,6 +51,7 @@ def compile(lang, code) -> dict:
 
     :return: Python dictionary
     """
+
     return compiler_api._compile(lang=lang, code=code)
 
 
@@ -70,6 +71,15 @@ def lyrics(song) -> dict:
 
 @app.route('/ascii_<text>')
 def ascii(text: str):
+    """
+    Makes ascii art
+
+    Arguments:
+        @text => Text to be converted to ascii art
+    
+    :return: Python Dictionary
+    """
+
     return ascii_api.generator(text=text)
 
 
