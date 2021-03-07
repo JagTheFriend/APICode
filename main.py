@@ -7,6 +7,7 @@ import reddit_api
 import lyrics_api
 import ascii_api
 import duration_of_a_playlist_api
+import temperature_api
 
 app = Flask(__name__)
 
@@ -26,7 +27,7 @@ def main() -> str:
     return "Providing service to other user(s) <br> Here is my code: <a href='https://github.com/JagTheFriend/APICode'> Click me </a>"
 
 
-@app.route('/reddit_<post>_<limit>')
+@app.route('/reddit+<post>+<limit>')
 def supreddit(post, limit) -> dict:
     """
     Gets a posts from reddit
@@ -40,7 +41,7 @@ def supreddit(post, limit) -> dict:
     return reddit_api.supreddit(post=post, limit=limit)
 
 
-@app.route('/compile_<lang>_<code>')
+@app.route('/compile+<lang>_<code>')
 def compile(lang, code) -> dict:
     """
     To allow users to run code
@@ -55,7 +56,7 @@ def compile(lang, code) -> dict:
     return compiler_api._compile(lang=lang, code=code)
 
 
-@app.route('/lyrics_<song>')
+@app.route('/lyrics+<song>')
 def lyrics(song) -> dict:
     """
     Gets the lyrics of a song
@@ -83,7 +84,21 @@ def ascii(text: str):
     return ascii_api.generator(text=text)
 
 
-@app.route('/length_<pl_id>')
+@app.route('/temp+<place>')
+def temp(place: str):
+    """
+    It finds out the temperature of a city
+
+    Arguments:
+        @city => Name of the city
+
+    :return: Python Dictionary
+    """
+
+    return temperature_api.temp(city=place)
+
+
+@app.route('/length+<pl_id>')
 def length(pl_id: str):
     """
     Gets the length of playlist
