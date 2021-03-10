@@ -7,7 +7,7 @@ def main():
 
     :return: Python Dictionary
     """
-    res = requests.get("https://zenquotes.io/api/random").json()
+    res = requests.get("https://zenquotes.io/api/random").json()[0]
     result = {}
     result["output"] = {}
     result["output"]["description"] = res["q"]
