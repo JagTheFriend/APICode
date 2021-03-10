@@ -2,16 +2,17 @@
 from flask import Flask
 
 # project imports
-import compiler_api
-import reddit_api
-import lyrics_api
-import ascii_api
-import duration_of_a_playlist_api
-import temperature_api
+from API import compiler_api
+from API import reddit_api
+from API import lyrics_api
+from API import ascii_api
+from API import duration_of_a_playlist_api
+from API import temperature_api
+from API import inspire_api
 
 app = Flask(__name__)
 
-MAIN_API_URL = "https://apis.theunkowncoder.repl.co/"
+MAIN_API_URL = "https://complicated-api.herokuapp.com/"
 
 
 @app.route('/')
@@ -25,6 +26,7 @@ def main() -> str:
     """
 
     return "Providing service to other user(s) <br> Here is my code: <a href='https://github.com/JagTheFriend/APICode'> Click me </a>"
+
 
 @app.route('/compile=<lang>_<code>')
 def compile(lang, code) -> dict:
@@ -40,9 +42,9 @@ def compile(lang, code) -> dict:
 
     return compiler_api._compile(lang=lang, code=code)
 
-    
+
 @app.route('/reddit=<post>+<limit>')
-def supreddit(post, limit) -> dict:
+def reddit(post, limit) -> dict:
     """
     Gets a posts from reddit
     Arguments:
@@ -83,7 +85,7 @@ def ascii(text: str):
     return ascii_api.generator(text=text)
 
 
-@app.route('/temp+<place>')
+@app.route('/temp=<place>')
 def temp(place: str):
     """
     It finds out the temperature of a city
@@ -111,5 +113,16 @@ def length(pl_id: str):
     return duration_of_a_playlist_api.main(pl_id)
 
 
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=6969, debug=True)
+@app.route('/inspire')
+def inspire():
+    """
+    Gets a random inspirational text
+
+    :return: Python dictionary
+    """
+
+    return inspire_api.main()
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
