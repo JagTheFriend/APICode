@@ -49,7 +49,8 @@ def prepare_input(code: str) -> str:
 
     # easiest way to fix the bug:
     try:
-        if match := list(FORMATTED_CODE_REGEX.finditer(code)):
+        match = list(FORMATTED_CODE_REGEX.finditer(code))
+        if match:
             blocks = [block for block in match if block.group("block")]
 
             if len(blocks) > 1:
