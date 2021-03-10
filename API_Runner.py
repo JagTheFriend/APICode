@@ -1,4 +1,4 @@
-# necessary imports
+# NECESSARY IMPORTS
 from flask import Flask
 
 # project imports
