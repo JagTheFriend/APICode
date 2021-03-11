@@ -13,14 +13,14 @@ This API supports:
 
 # Code snippets
 ## Compile API:
-<a href="https://apis.theunkowncoder.repl.co/compile=python_print('This works')">
+<a href="https://complicated-api.herokuapp.com/compile=python_print('This works')">
   Example:
 </a>
 
 ```py
 import requests
 
-URL = "https://apis.theunkowncoder.repl.co"
+URL = "https://complicated-api.herokuapp.com"
 
 # run python
 lang = "python"
@@ -41,19 +41,19 @@ class Compiler{
 print(requests.get(f"{URL}/compile={lang}_{code}").text)
 ```
 
-<a href="https://apis.theunkowncoder.repl.co/compile=support_support">
+<a href="https://complicated-api.herokuapp.com/compile=support_support">
   Get all the supported languages here
 </a>
 
 ## Reddit API:
-<a href="https://apis.theunkowncoder.repl.co/reddit=meme+10">
+<a href="https://complicated-api.herokuapp.com/reddit=meme+10">
   Example:
 </a>
 
 ```py
 import requests
 
-URL = "https://apis.theunkowncoder.repl.co"
+URL = "https://complicated-api.herokuapp.com"
 # example name_of_subreddit = "meme"
 name_of_subreddit = "name_of_a_valid_subreddit" 
 number_of_posts = 10 # number of posts to be returned
@@ -61,54 +61,54 @@ print(requests.get(f"{URL}/reddit={name_of_subreddit}+{number_of_posts}").text)
 ```
 
 ## Lyrics API:
-<a href="https://apis.theunkowncoder.repl.co/lyrics+falling">
+<a href="https://complicated-api.herokuapp.com/lyrics+falling">
   Example: 
 </a>
 
 ```py
 import requests
 
-URL = "https://apis.theunkowncoder.repl.co"
+URL = "https://complicated-api.herokuapp.com"
 SongName = "name of song"
 print(requests.get(f"{URL}/lyrics+{SongName}").text)
 ```
 
 ## Ascii Art API:
-<a href="https://apis.theunkowncoder.repl.co/ascii_hello">
+<a href="https://complicated-api.herokuapp.com/ascii_hello">
   Example:
 </a>
 
 ```py
 import requests
 
-URL = "https://apis.theunkowncoder.repl.co"
+URL = "https://complicated-api.herokuapp.com"
 text = "Hello gammer"
 print(requests.get(f"{URL}/ascii_{text}").text)
 ```
 
 ## Weather API:
-<a href="https://apis.theunkowncoder.repl.co/temp+Cape Town">
+<a href="https://complicated-api.herokuapp.com/temp+Cape Town">
   Example:
 </a>
 
 ```py
 import requests
 
-URL = "https://apis.theunkowncoder.repl.co"
+URL = "https://complicated-api.herokuapp.com"
 # example: place = Cape Town
 place = "name of a place"
 print(requests.get(f"{URL}/temp+{text}").text)
 ```
 
 ## Youtube Playlist length finder API:
-<a href="https://apis.theunkowncoder.repl.co/playlist+PL59LTecnGM1OGgddJzY-0r8vdqibi3S2H">
+<a href="https://complicated-api.herokuapp.com/playlist+PL59LTecnGM1OGgddJzY-0r8vdqibi3S2H">
   Example: 
 </a>
 
 ```py
 import requests
 
-URL = "https://apis.theunkowncoder.repl.co"
+URL = "https://complicated-api.herokuapp.com"
 # example URL: https://www.youtube.com/playlist?list=PL59LTecnGM1OGgddJzY-0r8vdqibi3S2H
 # id = PL59LTecnGM1OGgddJzY-0r8vdqibi3S2H
 play_list_link = "id"
