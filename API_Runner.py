@@ -9,7 +9,8 @@ from API import (
     ascii_api,
     duration_of_a_playlist_api,
     temperature_api,
-    inspire_api
+    inspire_api,
+    calculator_api
 )
 
 app = Flask(__name__)
@@ -124,6 +125,20 @@ def inspire():
     """
 
     return inspire_api.main()
+
+
+@app.route('/cal_<formula>')
+def calculator(formula):
+    """
+    Gets the result of a calculation
+
+    Arguments:
+        @formula => Stuff on which calculation will be carried on Example: 5+7*9
+
+    :return: Python dictionary
+    """
+
+    return {"output": calculator_api.main(equation=formula)}
 
 
 if __name__ == '__main__':
