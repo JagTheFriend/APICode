@@ -75,7 +75,7 @@ def lyrics(song) -> dict:
 
 
 @app.route('/ascii_<text>')
-def ascii(text: str):
+def ascii(text: str) -> dict:
     """
     Makes ascii art
 
@@ -89,7 +89,7 @@ def ascii(text: str):
 
 
 @app.route('/temp=<place>')
-def temp(place: str):
+def temp(place: str) -> dict:
     """
     It finds out the temperature of a city
 
@@ -103,7 +103,7 @@ def temp(place: str):
 
 
 @app.route('/length+<pl_id>')
-def length(pl_id: str):
+def length(pl_id: str) -> dict:
     """
     Gets the length of playlist
 
@@ -117,7 +117,7 @@ def length(pl_id: str):
 
 
 @app.route('/inspire')
-def inspire():
+def inspire() -> dict:
     """
     Gets a random inspirational text
 
@@ -128,7 +128,7 @@ def inspire():
 
 
 @app.route('/cal_<formula>')
-def calculator(formula):
+def calculator(formula) -> dict:
     """
     Gets the result of a calculation
 
@@ -138,7 +138,7 @@ def calculator(formula):
     :return: Python dictionary
     """
 
-    return {"output": calculator_api.main(equation=formula)}
+    return calculator_api.main(equation=formula)
 
 
 if __name__ == '__main__':
