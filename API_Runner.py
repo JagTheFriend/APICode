@@ -141,5 +141,19 @@ def calculator(formula) -> dict:
     return calculator_api.main(equation=formula)
 
 
+@app.route('/hex_to_denary+<hex_code>')
+def hex_to_denary(hex_code) -> dict:
+    """
+    Gets the result of a calculation
+
+    Arguments:
+        @formula => Stuff on which calculation will be carried on Example: 5+7*9
+
+    :return: Python dictionary
+    """
+
+    return calculator_api.hex_denary(hex_code=hex_code)
+
+
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,10 +1,7 @@
-FORMAT: {str: str} = {
-    "A": 10,
-    "B": 11,
-    "C": 12,
-    "D": 13,
-    "E": 14,
-    "F": 15
+FORMAT: {str: int} = {
+    '0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5,
+    '6': 6, '7': 7, '8': 8, '9': 9, 'A': 10, 'B': 11,
+    'C': 12, 'D': 13, 'E': 14, 'F': 15
 }
 
 
@@ -35,9 +32,10 @@ def hex_denary(*, hex_code: str) -> dict:
     :return: Python dictionary
     """
 
-    hex_code = list(hex_code)
-    for e, i in enumerate(hex_code):
-        if i in FORMAT:
-            hex_code[e] = f"{FORMAT[i]}"
+    answere = 0
+    power = len(hex_code) - 1
+    for digit in hex_code:
+        answere += FORMAT[digit]*16**power
+        power -= 1
 
-    return {"output": ''.join(hex_code)}
+    return {"output": str(answere)}
