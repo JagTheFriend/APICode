@@ -4,7 +4,7 @@ import os
 appid = os.environ.get('weather')
 
 
-def temp(*, city):
+def temp(*, city) -> dict:
     """
     It finds out the temperature of a city
 

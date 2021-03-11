@@ -1,7 +1,7 @@
 import requests
 
 
-def main():
+def main() -> dict:
     """
     Gets a random inspirational text
 
