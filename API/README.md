@@ -27,7 +27,7 @@ lang = "python"
 code = '''
 print('hello')
 '''
-print(requests.get(f"{URL}/compile+{lang}_{code}").text)
+print(requests.get(f"{URL}/compile+{lang}_{code}").json())
 
 # run java
 lang = "java"
@@ -38,7 +38,7 @@ class Compiler{
     }
 }
 '''
-print(requests.get(f"{URL}/compile={lang}_{code}").text)
+print(requests.get(f"{URL}/compile={lang}_{code}").json())
 ```
 
 <a href="https://complicated-api.herokuapp.com/compile=support_support">
@@ -57,7 +57,7 @@ URL = "https://complicated-api.herokuapp.com"
 # example name_of_subreddit = "meme"
 name_of_subreddit = "name_of_a_valid_subreddit" 
 number_of_posts = 10 # number of posts to be returned
-print(requests.get(f"{URL}/reddit={name_of_subreddit}+{number_of_posts}").text)
+print(requests.get(f"{URL}/reddit={name_of_subreddit}+{number_of_posts}").json())
 ```
 
 ## Lyrics API:
@@ -70,7 +70,7 @@ import requests
 
 URL = "https://complicated-api.herokuapp.com"
 SongName = "name of song"
-print(requests.get(f"{URL}/lyrics+{SongName}").text)
+print(requests.get(f"{URL}/lyrics+{SongName}").json())
 ```
 
 ## Ascii Art API:
@@ -83,7 +83,7 @@ import requests
 
 URL = "https://complicated-api.herokuapp.com"
 text = "Hello gammer"
-print(requests.get(f"{URL}/ascii_{text}").text)
+print(requests.get(f"{URL}/ascii_{text}").json())
 ```
 
 ## Weather API:
@@ -97,7 +97,7 @@ import requests
 URL = "https://complicated-api.herokuapp.com"
 # example: place = Cape Town
 place = "name of a place"
-print(requests.get(f"{URL}/temp+{text}").text)
+print(requests.get(f"{URL}/temp+{text}").json())
 ```
 
 ## Youtube Playlist length finder API:
@@ -112,7 +112,7 @@ URL = "https://complicated-api.herokuapp.com"
 # example URL: https://www.youtube.com/playlist?list=PL59LTecnGM1OGgddJzY-0r8vdqibi3S2H
 # id = PL59LTecnGM1OGgddJzY-0r8vdqibi3S2H
 play_list_link = "id"
-print(requests.get(f"{URL}/playlist+{play_list_link}").text)
+print(requests.get(f"{URL}/playlist+{play_list_link}").json())
 ```
 
 If you find any bugs _or have new ideas_, <br> 
