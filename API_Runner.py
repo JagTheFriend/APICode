@@ -2,13 +2,15 @@
 from flask import Flask
 
 # project imports
-from API import compiler_api
-from API import reddit_api
-from API import lyrics_api
-from API import ascii_api
-from API import duration_of_a_playlist_api
-from API import temperature_api
-from API import inspire_api
+from API import (
+    compiler_api,
+    reddit_api,
+    lyrics_api,
+    ascii_api,
+    duration_of_a_playlist_api,
+    temperature_api,
+    inspire_api
+)
 
 app = Flask(__name__)
 
