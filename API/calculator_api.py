@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 FORMAT: {str: int} = {
     '0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5,
     '6': 6, '7': 7, '8': 8, '9': 9, 'A': 10, 'B': 11,
@@ -5,6 +6,8 @@ FORMAT: {str: int} = {
 }
 
 
+=======
+>>>>>>> 9ec4e891975e502ac7df41e7e5beae0967cf3536
 def main(*, equation: str) -> dict:
     """
     Gets the result of a calculation
@@ -20,6 +23,7 @@ def main(*, equation: str) -> dict:
         return {"output": f"{str(eval(new_equation))}"}
     except Exception:
         return {"output": "Please write the formula properly"}
+<<<<<<< HEAD
 
 
 def hex_denary(*, hex_code: str) -> dict:
@@ -39,3 +43,5 @@ def hex_denary(*, hex_code: str) -> dict:
         power -= 1
 
     return {"output": str(answere)}
+=======
+>>>>>>> 9ec4e891975e502ac7df41e7e5beae0967cf3536
