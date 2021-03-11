@@ -18,7 +18,7 @@ This API supports:
 </a>
 
 ```py
-import requests as r
+import requests
 
 URL = "https://apis.theunkowncoder.repl.co"
 
@@ -27,7 +27,7 @@ lang = "python"
 code = '''
 print('hello')
 '''
-print(r.get(f"{URL}/compile+{lang}_{code}").text)
+print(requests.get(f"{URL}/compile+{lang}_{code}").text)
 
 # run java
 lang = "java"
@@ -38,7 +38,7 @@ class Compiler{
     }
 }
 '''
-print(r.get(f"{URL}/compile={lang}_{code}").text)
+print(requests.get(f"{URL}/compile={lang}_{code}").text)
 ```
 
 <a href="https://apis.theunkowncoder.repl.co/compile=support_support">
@@ -51,13 +51,13 @@ print(r.get(f"{URL}/compile={lang}_{code}").text)
 </a>
 
 ```py
-import requests as r
+import requests
 
 URL = "https://apis.theunkowncoder.repl.co"
 # example name_of_subreddit = "meme"
 name_of_subreddit = "name_of_a_valid_subreddit" 
 number_of_posts = 10 # number of posts to be returned
-print(f"{URL}/reddit={name_of_subreddit}+{number_of_posts}")
+print(requests.get(f"{URL}/reddit={name_of_subreddit}+{number_of_posts}").text)
 ```
 
 ## Lyrics API:
@@ -66,11 +66,11 @@ print(f"{URL}/reddit={name_of_subreddit}+{number_of_posts}")
 </a>
 
 ```py
-import requests as r
+import requests
 
 URL = "https://apis.theunkowncoder.repl.co"
 SongName = "name of song"
-print(f"{URL}/lyrics+{SongName}")
+print(requests.get(f"{URL}/lyrics+{SongName}").text)
 ```
 
 ## Ascii Art API:
@@ -79,11 +79,11 @@ print(f"{URL}/lyrics+{SongName}")
 </a>
 
 ```py
-import requests as r
+import requests
 
 URL = "https://apis.theunkowncoder.repl.co"
 text = "Hello gammer"
-print(f"{URL}/ascii_{text}")
+print(requests.get(f"{URL}/ascii_{text}").text)
 ```
 
 ## Weather API:
@@ -92,12 +92,12 @@ print(f"{URL}/ascii_{text}")
 </a>
 
 ```py
-import requests as r
+import requests
 
 URL = "https://apis.theunkowncoder.repl.co"
 # example: place = Cape Town
 place = "name of a place"
-print(f"{URL}/temp+{text}")
+print(requests.get(f"{URL}/temp+{text}").text)
 ```
 
 ## Youtube Playlist length finder API:
@@ -106,13 +106,13 @@ print(f"{URL}/temp+{text}")
 </a>
 
 ```py
-import requests as r
+import requests
 
 URL = "https://apis.theunkowncoder.repl.co"
 # example URL: https://www.youtube.com/playlist?list=PL59LTecnGM1OGgddJzY-0r8vdqibi3S2H
 # id = PL59LTecnGM1OGgddJzY-0r8vdqibi3S2H
 play_list_link = "id"
-print(f"{URL}/playlist+{play_list_link}")
+print(requests.get(f"{URL}/playlist+{play_list_link}").text)
 ```
 
 If you find any bugs _or have new ideas_, <br> 
