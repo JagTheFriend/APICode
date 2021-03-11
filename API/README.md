@@ -115,6 +115,19 @@ play_list_link = "id"
 print(requests.get(f"{URL}/playlist+{play_list_link}").json())
 ```
 
+## Calculator:
+<a href="https://complicated-api.herokuapp.com/cal_6*9+6+9">
+  Example: 
+</a>
+
+```py
+import requests
+
+URL = "https://complicated-api.herokuapp.com"
+formula = "6*9+6+9" 
+print(requests.get(f"{URL}/cal_{formula}").json())
+```
+
 If you find any bugs _or have new ideas_, <br> 
 Feel free to raise a 
   <a href="https://github.com/JagTheFriend/APICode/issues"> 
