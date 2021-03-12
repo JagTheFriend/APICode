@@ -106,7 +106,7 @@ print(requests.get(f"{URL}/temp+{text}").json())
 ```
 
 ## Youtube Playlist length finder:
-<a href="https://complicated-api.herokuapp.com/playlist+PL59LTecnGM1OGgddJzY-0r8vdqibi3S2H">
+<a href="https://complicated-api.herokuapp.com/length+PL59LTecnGM1OGgddJzY-0r8vdqibi3S2H">
   Example: 
 </a>
 
