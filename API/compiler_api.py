@@ -75,11 +75,8 @@ def prepare_input(code: str) -> str:
 def _compile(*, lang: str, code: str = "") -> dict:
     """
     To allow users to run code
-
-    Arguments:
-        :param code: Code to be compiled and ran
-        :param lang: The langage used for compiling the code
-
+    :param code: Code to be compiled and ran
+    :param lang: The langage used for compiling the code
     :return: Dictionary
     """
 

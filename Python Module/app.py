@@ -4,7 +4,9 @@ URL = "https://complicated-api.herokuapp.com/"
 
 def compile(*, lang, code):
     """
-        
+    Gets the result of compiling code from the `Compiler API`
+
+
     """
 
 def ascii(*, text) -> dict:

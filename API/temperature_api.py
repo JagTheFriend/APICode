@@ -7,10 +7,7 @@ appid = os.environ.get('weather')
 def temp(*, city) -> dict:
     """
     It finds out the temperature of a city
-
-    Arguments:
-        :param city: Name of the city
-
+    :param city: Name of the city
     :return: Dictionary
     """
 

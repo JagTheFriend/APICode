@@ -4,7 +4,6 @@ import requests
 def main() -> dict:
     """
     Gets a random inspirational text
-
     :return: Dictionary
     """
     res = requests.get("https://zenquotes.io/api/random").json()[0]

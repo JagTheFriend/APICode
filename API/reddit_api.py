@@ -14,11 +14,8 @@ reddit = praw.Reddit(
 def supreddit(*, post, limit) -> dict:
     """
     Gets a certain number of posts from a subreddit
-
-    Arguments:
-        :param post: Name of the subreddit
-        :param limit: Number of results to be returned
-
+    :param post: Name of the subreddit
+    :param limit: Number of results to be returned
     :return: Dictionary
     """
 

@@ -23,7 +23,6 @@ def main() -> str:
     """
     A main function  
     which handles the main `index` page
-
     So, the wouldn't get a 404 page if they
     try to go the main page
     """
@@ -35,11 +34,8 @@ def main() -> str:
 def compile(lang, code) -> dict:
     """
     To allow users to run code
-
-    Arguments:
-        :param code: Code to be compiled and ran
-        :param lang: The langage used for compiling the code
-
+    :param code: Code to be compiled and ran
+    :param lang: The langage used for compiling the code
     :return: Dictionary
     """
 
@@ -50,10 +46,8 @@ def compile(lang, code) -> dict:
 def reddit(post, limit) -> dict:
     """
     Gets a posts from reddit
-    Arguments:
-        :param post: Subreddit
-        :param limit: Total number of posts to be returned
-
+    :param post: Subreddit
+    :param limit: Total number of posts to be returned
     :return: Dictionary
     """
 
@@ -64,10 +58,7 @@ def reddit(post, limit) -> dict:
 def lyrics(song) -> dict:
     """
     Gets the lyrics of a song
-
-    Arguments:
-        :param lyrics: Name of the lyrics
-
+    :param lyrics: Name of the lyrics
     :return: Dictionary
     """
 
@@ -78,10 +69,7 @@ def lyrics(song) -> dict:
 def ascii(text: str) -> dict:
     """
     Makes ascii art
-
-    Arguments:
-        :param text: Text to be converted to ascii art
-
+    :param text: Text to be converted to ascii art
     :return: Dictionary
     """
 
@@ -92,10 +80,7 @@ def ascii(text: str) -> dict:
 def temp(place: str) -> dict:
     """
     It finds out the temperature of a city
-
-    Arguments:
-        :param city: Name of the city
-
+    :param city: Name of the city
     :return: Dictionary
     """
 
@@ -106,10 +91,7 @@ def temp(place: str) -> dict:
 def length(pl_id: str) -> dict:
     """
     Gets the length of playlist
-
-    Arguments:
-        :param playlist_id: This a unique id given to each playlist
-
+    :param playlist_id: This a unique id given to each playlist
     :return: Dictionary
     """
 
@@ -120,7 +102,6 @@ def length(pl_id: str) -> dict:
 def inspire() -> dict:
     """
     Gets a random inspirational text
-
     :return: Dictionary
     """
 
@@ -131,10 +112,7 @@ def inspire() -> dict:
 def calculator(formula) -> dict:
     """
     Gets the result of a calculation
-
-    Arguments:
-        :param formula: Stuff on which calculation will be carried on Example: 5+7*9
-
+    :param formula: Stuff on which calculation will be carried on Example: 5+7*9
     :return: Dictionary
     """
 
@@ -145,10 +123,7 @@ def calculator(formula) -> dict:
 def hex_to_denary(hex_code) -> dict:
     """
     Gets the result of a calculation
-
-    Arguments:
-        :param formula: Stuff on which calculation will be carried on Example: 5+7*9
-
+    :param formula: Stuff on which calculation will be carried on Example: 5+7*9
     :return: Dictionary
     """
 

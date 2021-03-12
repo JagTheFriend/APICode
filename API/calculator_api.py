@@ -8,10 +8,7 @@ FORMAT: {str: int} = {
 def main(*, equation: str) -> dict:
     """
     Gets the result of a calculation
-
-    Arguments:
-        :param formula: Stuff on which calculation will be carried on Example: 5+7*9
-
+    :param formula: Stuff on which calculation will be carried on Example: 5+7*9
     :return: Dictionary
     """
 
@@ -25,10 +22,7 @@ def main(*, equation: str) -> dict:
 def hex_denary(*, hex_code: str) -> dict:
     """
     Gets the result of a calculation
-
-    Arguments:
-        :param hex_code: This the hexadecimal code given by the user
-
+    :param hex_code: This the hexadecimal code given by the user
     :return: Dictionary
     """
 

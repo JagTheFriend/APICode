@@ -5,10 +5,7 @@ import random
 def generator(*, text) -> dict:
     """
     Makes ascii art
-
-    Arguments:
-        :param text: Text to be converted to ascii art
-
+    :param text: Text to be converted to ascii art
     :return: Dictionary
     """
 
