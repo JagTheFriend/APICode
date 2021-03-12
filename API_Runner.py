@@ -37,10 +37,10 @@ def compile(lang, code) -> dict:
     To allow users to run code
 
     Arguments:
-        @code => Code to be compiled and ran
-        @lang => The langage used for compiling the code
+        :param code: Code to be compiled and ran
+        :param lang: The langage used for compiling the code
 
-    :return: Python dictionary
+    :return: Dictionary
     """
 
     return compiler_api._compile(lang=lang, code=code)
@@ -51,10 +51,10 @@ def reddit(post, limit) -> dict:
     """
     Gets a posts from reddit
     Arguments:
-        @post => Subreddit
-        @limit => Total number of posts to be returned
+        :param post: Subreddit
+        :param limit: Total number of posts to be returned
 
-    :return: Python dictionary
+    :return: Dictionary
     """
 
     return reddit_api.supreddit(post=post, limit=limit)
@@ -66,9 +66,9 @@ def lyrics(song) -> dict:
     Gets the lyrics of a song
 
     Arguments:
-        @lyrics => Name of the lyrics
+        :param lyrics: Name of the lyrics
 
-    :return: Python dictionary
+    :return: Dictionary
     """
 
     return lyrics_api.song_lyrics(song)
@@ -80,9 +80,9 @@ def ascii(text: str) -> dict:
     Makes ascii art
 
     Arguments:
-        @text => Text to be converted to ascii art
+        :param text: Text to be converted to ascii art
 
-    :return: Python Dictionary
+    :return: Dictionary
     """
 
     return ascii_api.generator(text=text)
@@ -94,9 +94,9 @@ def temp(place: str) -> dict:
     It finds out the temperature of a city
 
     Arguments:
-        @city => Name of the city
+        :param city: Name of the city
 
-    :return: Python Dictionary
+    :return: Dictionary
     """
 
     return temperature_api.temp(city=place)
@@ -108,9 +108,9 @@ def length(pl_id: str) -> dict:
     Gets the length of playlist
 
     Arguments:
-        @playlist_id => This a unique id given to each playlist
+        :param playlist_id: This a unique id given to each playlist
 
-    :return: Python Dictionary
+    :return: Dictionary
     """
 
     return duration_of_a_playlist_api.main(pl_id)
@@ -121,7 +121,7 @@ def inspire() -> dict:
     """
     Gets a random inspirational text
 
-    :return: Python dictionary
+    :return: Dictionary
     """
 
     return inspire_api.main()
@@ -133,9 +133,9 @@ def calculator(formula) -> dict:
     Gets the result of a calculation
 
     Arguments:
-        @formula => Stuff on which calculation will be carried on Example: 5+7*9
+        :param formula: Stuff on which calculation will be carried on Example: 5+7*9
 
-    :return: Python dictionary
+    :return: Dictionary
     """
 
     return calculator_api.main(equation=formula)
@@ -147,9 +147,9 @@ def hex_to_denary(hex_code) -> dict:
     Gets the result of a calculation
 
     Arguments:
-        @formula => Stuff on which calculation will be carried on Example: 5+7*9
+        :param formula: Stuff on which calculation will be carried on Example: 5+7*9
 
-    :return: Python dictionary
+    :return: Dictionary
     """
 
     return calculator_api.hex_denary(hex_code=hex_code)

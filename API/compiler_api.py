@@ -77,10 +77,10 @@ def _compile(*, lang: str, code: str = "") -> dict:
     To allow users to run code
 
     Arguments:
-        @code => Code to be compiled and ran
-        @lang => The langage used for compiling the code
+        :param code: Code to be compiled and ran
+        :param lang: The langage used for compiling the code
 
-    :return: Python dictionary
+    :return: Dictionary
     """
 
     result = {}

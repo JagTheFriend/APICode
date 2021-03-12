@@ -9,9 +9,9 @@ def temp(*, city) -> dict:
     It finds out the temperature of a city
 
     Arguments:
-        @city => Name of the city
+        :param city: Name of the city
 
-    :return: Python Dictionary
+    :return: Dictionary
     """
 
     result = {}

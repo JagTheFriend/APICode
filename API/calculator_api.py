@@ -10,9 +10,9 @@ def main(*, equation: str) -> dict:
     Gets the result of a calculation
 
     Arguments:
-        @formula => Stuff on which calculation will be carried on Example: 5+7*9
+        :param formula: Stuff on which calculation will be carried on Example: 5+7*9
 
-    :return: Python dictionary
+    :return: Dictionary
     """
 
     try:
@@ -27,9 +27,9 @@ def hex_denary(*, hex_code: str) -> dict:
     Gets the result of a calculation
 
     Arguments:
-        @hex_code => This the hexadecimal code given by the user
+        :param hex_code: This the hexadecimal code given by the user
 
-    :return: Python dictionary
+    :return: Dictionary
     """
 
     answere = 0

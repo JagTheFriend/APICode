@@ -7,9 +7,9 @@ def song_lyrics(song) -> dict:
     Gets the lyrics of a song
 
     Arguments:
-        @song => Name of the song
+        :param song: Name of the song
 
-    :return: Python dictionary
+    :return: Dictionary
     """
 
     if song:

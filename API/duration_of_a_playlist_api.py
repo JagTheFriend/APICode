@@ -18,9 +18,9 @@ def main(playlist_id: str) -> dict:
     watch an entire playlist, from the start to end
 
     Arguments:
-        @playlist_id => This a unique id given to each playlist
+        :param playlist_id: This a unique id given to each playlist
 
-    :return: Python Dictionary
+    :return: Dictionary
     """
 
     total_seconds = 0

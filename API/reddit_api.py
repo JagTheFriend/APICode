@@ -16,10 +16,10 @@ def supreddit(*, post, limit) -> dict:
     Gets a certain number of posts from a subreddit
 
     Arguments:
-        @post => Name of the subreddit
-        @limit => Number of results to be returned
+        :param post: Name of the subreddit
+        :param limit: Number of results to be returned
 
-    :return: Python dictionary
+    :return: Dictionary
     """
 
     if str(limit).isdigit():
