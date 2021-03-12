@@ -91,7 +91,7 @@ def temp(place: str) -> dict:
 def length(pl_id: str) -> dict:
     """
     Gets the length of playlist
-    :param playlist_id: This a unique id given to each playlist
+    :param pl_id: This a unique id given to each playlist
     :return: Dictionary
     """
 
@@ -122,8 +122,8 @@ def calculator(formula) -> dict:
 @app.route('/hex_to_denary+<hex_code>')
 def hex_to_denary(hex_code) -> dict:
     """
-    Gets the result of a calculation
-    :param formula: Stuff on which calculation will be carried on Example: 5+7*9
+    Converts Hexadecimal code to decimal(or denary)
+    :param hex_code: Stuff on which calculation will be carried on Example: 5+7*9
     :return: Dictionary
     """
 
