@@ -78,8 +78,3 @@ def main(playlist_id: str) -> dict:
     minutes, seconds = divmod(total_seconds, 60)
     hours, minutes = divmod(minutes, 60)
     return {"output": f'{hours} hour(s):{minutes} minute(s):{seconds} second(s)'}
-
-
-if __name__ == '__main__':
-    playlistId = "PLYMreygRONRAYHAfALESBgZJpftQQWSjz"  # a yt playlist
-    print(main(playlistId))

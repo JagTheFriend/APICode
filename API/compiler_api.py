@@ -26,7 +26,6 @@ RAW_CODE_REGEX = re.compile(
 
 LANGUAGES = [
     "Bash(Language Name: bash)",
-    "CPP(Language Name: cxx)",
     "C#(Language Name: cs)",
 
     "Elixir(Language Name: elixir)",
