@@ -92,7 +92,7 @@ print(requests.get(f"{URL}/ascii_{text}").json())
 ```
 
 ## Weather API:
-<a href="https://complicated-api.herokuapp.com/temp+Cape Town">
+<a href="https://complicated-api.herokuapp.com/temp=Cape Town">
   Example:
 </a>
 
