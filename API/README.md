@@ -7,9 +7,14 @@ This API supports:
   + compiling the code(of different languages) and getting the output
   + getting a random post from a _subreddit_
   + getting the lyrics of a song
-  + generating Ascii
+  
+  + generating pixel art
   + getting the weather of a place
   + finding the length of a youtube playlist
+
+  + getting a random inspirational text
+  + getting a result of a calculation
+  + converting hexadecimal to decimal(or denary)
 
 # Code snippets
 ## Compile API:
@@ -73,7 +78,7 @@ SongName = "name of song"
 print(requests.get(f"{URL}/lyrics+{SongName}").json())
 ```
 
-## Ascii Art API:
+## Pixel Art:
 <a href="https://complicated-api.herokuapp.com/ascii_hello">
   Example:
 </a>
@@ -100,7 +105,7 @@ place = "name of a place"
 print(requests.get(f"{URL}/temp+{text}").json())
 ```
 
-## Youtube Playlist length finder API:
+## Youtube Playlist length finder:
 <a href="https://complicated-api.herokuapp.com/playlist+PL59LTecnGM1OGgddJzY-0r8vdqibi3S2H">
   Example: 
 </a>
@@ -126,6 +131,31 @@ import requests
 URL = "https://complicated-api.herokuapp.com"
 formula = "6*9+6+9" 
 print(requests.get(f"{URL}/cal_{formula}").json())
+```
+
+## Inspire API:
+<a href="https://complicated-api.herokuapp.com/inspire">
+  Example: 
+</a>
+
+```py
+import requests
+
+URL = "https://complicated-api.herokuapp.com"
+print(requests.get(f"{URL}/inspire").json())
+```
+
+## Hexadecimal to Decimal(or Denary) converter:
+<a href="https://complicated-api.herokuapp.com/hex_to_denary+ABCDEF">
+  Example: 
+</a>
+
+```py
+import requests
+
+URL = "https://complicated-api.herokuapp.com"
+formula = "A6B9C1D1E1" 
+print(requests.get(f"{URL}/hex_to_denary+{formula}").json())
 ```
 
 If you find any bugs _or have new ideas_, <br> 
