@@ -18,7 +18,7 @@ Expected_hex = "4893429231"
 Compile_Tests = {
     "python": {"code": 'print("python")', "output": 'python'},
     "java": {"code": 'class Java{\n\tpublic static void main(String[] works){\n\t\tSystem.out.println("java");\n\t}\n}\n', "output": 'java'},
-    "js": {"code": "console.log('JavaScript')", "output": 'javascript'}
+    "js": {"code": "console.log('JavaScript')", "output": 'JavaScript'}
 }
 
 # Pixel Art

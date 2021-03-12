@@ -3,6 +3,10 @@ import requests
 URL = "https://complicated-api.herokuapp.com/"
 
 
+def main() -> str:
+    return requests.get(f"{URL}").text
+
+
 def compile(*, lang, code) -> dict:
     """
     Gets the result of compiling code from the `Compiler API`
@@ -20,7 +24,7 @@ def reddit(*, limit: float, subreddit: str) -> dict:
     :param limit: Number of posts to be returned
     :return: Dictionary
     """
-    return requests.get(f"{URL}/reddit={' '.join(subreddit)}+{limit}").json()
+    return requests.get(f"{URL}/reddit={subreddit}+{limit}").json()
 
 
 def lyrics(*, song: str) -> dict:
