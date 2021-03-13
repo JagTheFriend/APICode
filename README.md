@@ -102,7 +102,7 @@ import requests
 URL = "https://complicated-api.herokuapp.com"
 # example: place = Cape Town
 place = "name of a place"
-print(requests.get(f"{URL}/temp+{text}").json())
+print(requests.get(f"{URL}/temp={text}").json())
 ```
 
 ## Youtube Playlist length finder:
