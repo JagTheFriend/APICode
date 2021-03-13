@@ -2,6 +2,12 @@ import requests
 
 URL = "https://complicated-api.herokuapp.com/"
 
+__all__ = [
+    "compile", "reddit", "lyrics",
+    "ascii", "temp", "length",
+    "inspire", "calculator", "hex_to_denary"
+]
+
 
 def main() -> str:
     return requests.get(f"{URL}").text
