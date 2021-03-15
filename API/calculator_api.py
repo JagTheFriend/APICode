@@ -11,7 +11,6 @@ def main(*, equation: str) -> dict:
     :param formula: Stuff on which calculation will be carried on Example: 5+7*9
     :return: Dictionary
     """
-
     try:
         new_equation = equation.replace("^", "**")
         return {"output": f"{str(eval(new_equation))}"}
@@ -25,7 +24,6 @@ def hex_denary(*, hex_code: str) -> dict:
     :param hex_code: This the hexadecimal code given by the user
     :return: Dictionary
     """
-
     answere = 0
     power = len(hex_code) - 1
     for digit in hex_code:

@@ -45,7 +45,6 @@ def prepare_input(code: str) -> str:
     """
     Returns the code to be run
     """
-
     # easiest way to fix the bug:
     try:
         match = list(FORMATTED_CODE_REGEX.finditer(code))
@@ -79,7 +78,6 @@ def _compile(*, lang: str, code: str = "") -> dict:
     :param lang: The langage used for compiling the code
     :return: Dictionary
     """
-
     result = {}
     result["output"] = ""
 

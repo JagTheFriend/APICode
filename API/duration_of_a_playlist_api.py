@@ -19,7 +19,6 @@ def main(playlist_id: str) -> dict:
     :param playlist_id: This a unique id given to each playlist
     :return: Dictionary
     """
-
     total_seconds = 0
     next_page_token = None
     while True:

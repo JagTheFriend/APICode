@@ -11,14 +11,13 @@ reddit = praw.Reddit(
 )
 
 
-def supreddit(*, post, limit) -> dict:
+def supreddit(*, post: str, limit: int) -> dict:
     """
     Gets a certain number of posts from a subreddit
     :param post: Name of the subreddit
     :param limit: Number of results to be returned
     :return: Dictionary
     """
-
     if str(limit).isdigit():
         limit = int(limit)
     else:

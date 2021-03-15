@@ -76,15 +76,15 @@ def ascii(text: str) -> dict:
     return ascii_api.generator(text=text)
 
 
-@app.route('/temp=<place>')
-def temp(place: str) -> dict:
+@app.route('/temp=<place>+<unit>')
+def temp(place: str, unit: str) -> dict:
     """
     It finds out the temperature of a city
     :param city: Name of the city
     :return: Dictionary
     """
 
-    return temperature_api.temp(city=place)
+    return temperature_api.temp(city=place, unit=unit)
 
 
 @app.route('/length+<pl_id>')

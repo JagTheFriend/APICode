@@ -2,13 +2,12 @@ import os
 from lyrics_extractor import SongLyrics
 
 
-def song_lyrics(song) -> dict:
+def song_lyrics(song: str) -> dict:
     """
     Gets the lyrics of a song
     :param song: Name of the song
     :return: Dictionary
     """
-
     if song:
         extract_lyrics = SongLyrics(os.environ.get(
             "lyrics_token"), os.environ.get("GCS_ENGINE_ID")
