@@ -20,8 +20,8 @@ def main(*, equation: str) -> dict:
 
 def hex_denary(*, hex_code: str) -> dict:
     """
-    Gets the result of a calculation
-    :param hex_code: This the hexadecimal code given by the user
+    Converts hexadecimal to decimal
+    :param hex_code: This is the hexadecimal code given by the user
     :return: Dictionary
     """
     answere = 0
@@ -31,3 +31,12 @@ def hex_denary(*, hex_code: str) -> dict:
         power -= 1
 
     return {"output": str(answere)}
+
+
+def denary_binary(*, binary) -> dict:
+    """
+    Converts decimal to binary
+    :param binary: This is the decimal code given by the user
+    :return: Dictionary
+    """
+    return {"output": ''.join(format(ord(i), '08b') for i in binary)}

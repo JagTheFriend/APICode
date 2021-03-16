@@ -26,7 +26,6 @@ def main() -> str:
     So, the wouldn't get a 404 page if they
     try to go the main page
     """
-
     return "Providing service to other user(s) <br> Here is my code: <a href='https://github.com/JagTheFriend/APICode'> Click me </a>"
 
 
@@ -38,7 +37,6 @@ def compile(lang, code) -> dict:
     :param lang: The langage used for compiling the code
     :return: Dictionary
     """
-
     return compiler_api._compile(lang=lang, code=code)
 
 
@@ -50,7 +48,6 @@ def reddit(post, limit) -> dict:
     :param limit: Total number of posts to be returned
     :return: Dictionary
     """
-
     return reddit_api.supreddit(post=post, limit=limit)
 
 
@@ -61,7 +58,6 @@ def lyrics(song) -> dict:
     :param lyrics: Name of the lyrics
     :return: Dictionary
     """
-
     return lyrics_api.song_lyrics(song)
 
 
@@ -72,7 +68,6 @@ def ascii(text: str) -> dict:
     :param text: Text to be converted to ascii art
     :return: Dictionary
     """
-
     return ascii_api.generator(text=text)
 
 
@@ -83,7 +78,6 @@ def temp(place: str, unit: str) -> dict:
     :param city: Name of the city
     :return: Dictionary
     """
-
     return temperature_api.temp(city=place, unit=unit)
 
 
@@ -94,7 +88,6 @@ def length(pl_id: str) -> dict:
     :param pl_id: This a unique id given to each playlist
     :return: Dictionary
     """
-
     return duration_of_a_playlist_api.main(pl_id)
 
 
@@ -104,7 +97,6 @@ def inspire() -> dict:
     Gets a random inspirational text
     :return: Dictionary
     """
-
     return inspire_api.main()
 
 
@@ -115,19 +107,27 @@ def calculator(formula) -> dict:
     :param formula: Stuff on which calculation will be carried on Example: 5+7*9
     :return: Dictionary
     """
-
     return calculator_api.main(equation=formula)
 
 
-@app.route('/hex_to_denary+<hex_code>')
-def hex_to_denary(hex_code) -> dict:
+@app.route('/hex+<string:hex_code>')
+def hex(hex_code) -> dict:
     """
     Converts Hexadecimal code to decimal(or denary)
     :param hex_code: Stuff on which calculation will be carried on Example: 5+7*9
     :return: Dictionary
     """
-
     return calculator_api.hex_denary(hex_code=hex_code)
+
+
+@app.route('/binary+<string:number>')
+def binary(number) -> dict:
+    """
+    Converts Hexadecimal code to decimal(or denary)
+    :param hex_code: Stuff on which calculation will be carried on Example: 5+7*9
+    :return: Dictionary
+    """
+    return calculator_api.denary_binary(binary=number)
 
 
 if __name__ == '__main__':
