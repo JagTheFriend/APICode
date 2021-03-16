@@ -120,7 +120,7 @@ def hex(hex_code) -> dict:
     return calculator_api.hex_denary(hex_code=hex_code)
 
 
-@app.route('/binary+<string:number>')
+@app.route('/binary=<string:number>')
 def binary(number) -> dict:
     """
     Converts Hexadecimal code to decimal(or denary)
