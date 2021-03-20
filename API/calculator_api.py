@@ -13,6 +13,7 @@ def main(*, equation: str) -> dict:
     """
     try:
         new_equation = equation.replace("^", "**")
+        new_equation = equation.replace("\\", "/")
         return {"output": f"{str(eval(new_equation))}"}
     except Exception:
         return {"output": "Please write the formula properly"}

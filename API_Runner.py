@@ -21,7 +21,7 @@ MAIN_API_URL = "https://complicated-api.herokuapp.com/"
 @app.route('/')
 def main() -> str:
     """
-    A main function  
+    A main function
     which handles the main `index` page
     So, the wouldn't get a 404 page if they
     try to go the main page
@@ -100,7 +100,7 @@ def inspire() -> dict:
     return inspire_api.main()
 
 
-@app.route('/cal_<formula>')
+@app.route('/cal_<string:formula>')
 def calculator(formula) -> dict:
     """
     Gets the result of a calculation
