@@ -1,5 +1,4 @@
 from art import text2art
-import random
 
 
 def generator(*, text: str) -> dict:
