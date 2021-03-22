@@ -47,13 +47,7 @@ def hex_denary(*, hex_code: str) -> dict:
     :param hex_code: This is the hexadecimal code given by the user
     :return: Dictionary
     """
-    answere = 0
-    power = len(hex_code) - 1
-    for digit in hex_code:
-        answere += FORMAT[digit]*16**power
-        power -= 1
-
-    return {"output": str(answere)}
+    return {"output": int(hex_code, base=16)}
 
 
 def denary_binary(*, binary) -> dict:
