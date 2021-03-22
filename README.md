@@ -20,11 +20,10 @@ Currently, the API supports:
 
 # Code snippets
 In order to use the API,
-you need first download [this module (`pip install Complex-API`)](https://API.jagthefriend.repl.co)
+you need to first download [this module (`pip install Complex-API`)](https://pypi.org/project/Complex-API/)
 
 ## Compile API:
 [Example:](https://github.com/JagTheFriend/Complex-API/pulls)
-
 ```py
 from Complex_API import complex_api
 # run python
@@ -47,9 +46,7 @@ print(complex_api.compile(lang=lang, code=code))
 [Get all the supported languages here](https://API.jagthefriend.repl.co/compile=support_support)
 
 ## Reddit API:
-<a href="https://API.jagthefriend.repl.co/reddit=meme+10">
-  Example:
-
+[Example:](https://API.jagthefriend.repl.co/reddit=meme+10)
 ```py
 from Complex_API import complex_api
 # example: name_of_subreddit = "meme"
@@ -60,7 +57,6 @@ print(complex_api.reddit(limit=number_of_posts, subreddit=name_of_subreddit))
 
 ## Lyrics API:
 [Example:](https://API.jagthefriend.repl.co/lyrics+falling)
-
 ```py
 from Complex_API import complex_api
 SongName = "name of song"
@@ -69,7 +65,6 @@ print(complex_api.lyrics(song=SongName))
 
 ## Pixel Art:
 [Example:](https://API.jagthefriend.repl.co/ascii_hello)
-
 ```py
 from Complex_API import complex_api
 text = "Hello gammer"
@@ -78,7 +73,6 @@ print(complex_api.ascii(text=text))
 
 ## Weather API:
 [Example:](https://API.jagthefriend.repl.co/temp=Cape Town+metric)
-
 ```py
 from Complex_API import complex_api
 # example: place = Cape Town
@@ -89,7 +83,6 @@ print(complex_api.temp(place=place, unit=unit))
 
 ## Youtube Playlist length finder:
 [Example:](https://API.jagthefriend.repl.co/length+PL59LTecnGM1OGgddJzY-0r8vdqibi3S2H)
-
 ```py
 from Complex_API import complex_api
 # example URL: https://www.youtube.com/playlist?list=PL59LTecnGM1OGgddJzY-0r8vdqibi3S2H
@@ -99,10 +92,7 @@ print(complex_api.length(playlist=play_list_link))
 ```
 
 ## Calculator:
-
-  [Example:](https://API.jagthefriend.repl.co/cal_6*9+6+9)
-
-
+[Example:](https://API.jagthefriend.repl.co/cal_6*9+6+9)
 ```py
 from Complex_API import complex_api
 formula = "6*9+6+9"
@@ -110,20 +100,14 @@ print(complex_api.calculator(formula=formula))
 ```
 
 ## Inspire API:
-
-  [Example:](https://API.jagthefriend.repl.co/inspire)
-
-
+[Example:](https://API.jagthefriend.repl.co/inspire)
 ```py
 from Complex_API import complex_api
 print(complex_api.inspire())
 ```
 
 ## Hexadecimal to Decimal(or Denary) converter:
-
-  [Example:](https://API.jagthefriend.repl.co/hex+ABCDEF)
-
-
+[Example:](https://API.jagthefriend.repl.co/hex+ABCDEF)
 ```py
 from Complex_API import complex_api
 formula = "A6B9C1D1E1"
@@ -132,7 +116,6 @@ print(complex_api.hex_to_denary(hex_code=formula))
 
 ## Decimal(or Denary) to Binary converter:
 [Example:](https://API.jagthefriend.repl.co/binary=1969)
-
 ```py
 from Complex_API import complex_api
 formula = "45713" # any number
@@ -141,10 +124,8 @@ print(complex_api.binary_to_denary(binary=formula))
 
 If you find any bugs _or have new ideas_,
 
-Feel free to raise a
-
+Feel free to raise a <br>
 [new issue](https://github.com/JagTheFriend/Complex-API/issues)
-
-Or a
-
+<br>
+Or a <br>
 [pull request](https://github.com/JagTheFriend/Complex-API/pulls)
