@@ -37,7 +37,7 @@ from API import (
 
 app = Flask(__name__)
 
-MAIN_API_URL = "https://complicated-api.herokuapp.com/"
+MAIN_API_URL = "https://API.jagthefriend.repl.co/"
 
 
 @app.route('/')
