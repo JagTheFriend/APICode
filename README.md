@@ -1,7 +1,7 @@
 # API Code
 This the source code for the API I have built/working on
 
-This module makes it easy to use my <a href="https://pypi.org/project/Complex-API/"> API </a>
+This module makes it easy to use my [API](https://pypi.org/project/Complex-API/)
 
 Currently, the API supports:
   + compiling the code(of different languages) and getting the output
@@ -20,12 +20,10 @@ Currently, the API supports:
 
 # Code snippets
 In order to use the API,
-you need first download <a href="https://pypi.org/project/Complex-API/">this module (`pip install Complex-API`)</a>
+you need first download [this module (`pip install Complex-API`)](https://API.jagthefriend.repl.co)
 
 ## Compile API:
-<a href="https://API.jagthefriend.repl.co/compile=python_print('This works')">
-  Example:
-</a>
+[Example:](https://github.com/JagTheFriend/Complex-API/pulls)
 
 ```py
 from Complex_API import complex_api
@@ -46,15 +44,11 @@ class Compiler{
 '''
 print(complex_api.compile(lang=lang, code=code))
 ```
-
-<a href="https://API.jagthefriend.repl.co/compile=support_support">
-  Get all the supported languages here
-</a>
+[Get all the supported languages here](https://API.jagthefriend.repl.co/compile=support_support)
 
 ## Reddit API:
 <a href="https://API.jagthefriend.repl.co/reddit=meme+10">
   Example:
-</a>
 
 ```py
 from Complex_API import complex_api
@@ -65,9 +59,7 @@ print(complex_api.reddit(limit=number_of_posts, subreddit=name_of_subreddit))
 ```
 
 ## Lyrics API:
-<a href="https://API.jagthefriend.repl.co/lyrics+falling">
-  Example:
-</a>
+[Example:](https://API.jagthefriend.repl.co/lyrics+falling)
 
 ```py
 from Complex_API import complex_api
@@ -76,9 +68,7 @@ print(complex_api.lyrics(song=SongName))
 ```
 
 ## Pixel Art:
-<a href="https://API.jagthefriend.repl.co/ascii_hello">
-  Example:
-</a>
+[Example:](https://API.jagthefriend.repl.co/ascii_hello)
 
 ```py
 from Complex_API import complex_api
@@ -87,9 +77,7 @@ print(complex_api.ascii(text=text))
 ```
 
 ## Weather API:
-<a href="https://API.jagthefriend.repl.co/temp=Cape Town+metric">
-  Example:
-</a>
+[Example:](https://API.jagthefriend.repl.co/temp=Cape Town+metric)
 
 ```py
 from Complex_API import complex_api
@@ -100,9 +88,7 @@ print(complex_api.temp(place=place, unit=unit))
 ```
 
 ## Youtube Playlist length finder:
-<a href="https://API.jagthefriend.repl.co/length+PL59LTecnGM1OGgddJzY-0r8vdqibi3S2H">
-  Example:
-</a>
+[Example:](https://API.jagthefriend.repl.co/length+PL59LTecnGM1OGgddJzY-0r8vdqibi3S2H)
 
 ```py
 from Complex_API import complex_api
@@ -113,9 +99,9 @@ print(complex_api.length(playlist=play_list_link))
 ```
 
 ## Calculator:
-<a href="https://API.jagthefriend.repl.co/cal_6*9+6+9">
-  Example:
-</a>
+
+  [Example:](https://API.jagthefriend.repl.co/cal_6*9+6+9)
+
 
 ```py
 from Complex_API import complex_api
@@ -124,9 +110,9 @@ print(complex_api.calculator(formula=formula))
 ```
 
 ## Inspire API:
-<a href="https://API.jagthefriend.repl.co/inspire">
-  Example:
-</a>
+
+  [Example:](https://API.jagthefriend.repl.co/inspire)
+
 
 ```py
 from Complex_API import complex_api
@@ -134,9 +120,9 @@ print(complex_api.inspire())
 ```
 
 ## Hexadecimal to Decimal(or Denary) converter:
-<a href="https://API.jagthefriend.repl.co/hex+ABCDEF">
-  Example:
-</a>
+
+  [Example:](https://API.jagthefriend.repl.co/hex+ABCDEF)
+
 
 ```py
 from Complex_API import complex_api
@@ -145,9 +131,7 @@ print(complex_api.hex_to_denary(hex_code=formula))
 ```
 
 ## Decimal(or Denary) to Binary converter:
-<a href="https://API.jagthefriend.repl.co/binary=4969">
-  Example:
-</a>
+[Example:](https://API.jagthefriend.repl.co/binary=1969)
 
 ```py
 from Complex_API import complex_api
@@ -155,12 +139,12 @@ formula = "45713" # any number
 print(complex_api.binary_to_denary(binary=formula))
 ```
 
-If you find any bugs _or have new ideas_, <br>
+If you find any bugs _or have new ideas_,
+
 Feel free to raise a
-  <a href="https://github.com/JagTheFriend/Complex-API/issues">
-    new issue
-  </a> <br>
+
+[new issue](https://github.com/JagTheFriend/Complex-API/issues)
+
 Or a
-  <a href="https://github.com/JagTheFriend/Complex-API/pulls">
-    pull request
-  </a>
+
+[pull request](https://github.com/JagTheFriend/Complex-API/pulls)
