@@ -154,7 +154,7 @@ def binary(number) -> dict:
 
 
 @app.route('/ai_<string:text>')
-def ai(text: str) -> dict:
+def chatbot(text: str) -> dict:
     """
     Allow you to talk with an `AI` 
     :param message: The text the `AI` would process
