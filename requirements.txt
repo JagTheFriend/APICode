@@ -1,3 +1,4 @@
+python-aiml==0.9.3
 art==5.1
 autopep8==1.5.5
 beautifulsoup4==4.9.3
@@ -15,9 +16,13 @@ google-auth==1.27.1
 google-auth-httplib2==0.1.0
 googleapis-common-protos==1.53.0
 gunicorn==20.0.4
+h11==0.12.0
+httpcore==0.12.3
 httplib2==0.19.0
+httpx==0.16.1
 idna==2.10
 importlib-metadata==3.7.2
+instant-api-client==0.1.1
 itsdangerous==1.1.0
 Jinja2==2.11.3
 keyring==23.0.0
@@ -30,6 +35,7 @@ pkginfo==1.7.0
 praw==7.2.0
 prawcore==2.0.0
 protobuf==3.15.5
+prsaw==0.2.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycodestyle==2.6.0
@@ -44,6 +50,7 @@ requests-toolbelt==0.9.1
 rfc3986==1.4.0
 rsa==4.7.2
 six==1.15.0
+sniffio==1.2.0
 soupsieve==2.2
 toml==0.10.2
 tqdm==4.59.0
