@@ -32,7 +32,8 @@ from API import (
     duration_of_a_playlist_api,
     temperature_api,
     inspire_api,
-    calculator_api
+    calculator_api,
+    ai_api
 )
 
 app = Flask(__name__)
@@ -150,6 +151,16 @@ def binary(number) -> dict:
     :return: Dictionary
     """
     return calculator_api.denary_binary(binary=number)
+
+
+@app.route('/ai_<string:text>')
+def ai(text: str) -> dict:
+    """
+    Allow you to talk with an `AI` 
+    :param message: The text the `AI` would process
+    :return: Dictionary
+    """
+    return ai_api._ai(message=text)
 
 
 if __name__ == '__main__':
