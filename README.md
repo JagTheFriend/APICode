@@ -72,7 +72,7 @@ print(complex_api.ascii(text=text))
 ```
 
 ## Weather API:
-[Example:](https://API.jagthefriend.repl.co/temp=Cape Town+metric)
+[Example:](https://API.jagthefriend.repl.co/temp=America+metric)
 ```py
 from Complex_API import complex_api
 # example: place = Cape Town
