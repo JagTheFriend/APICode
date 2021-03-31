@@ -1,16 +1,5 @@
 [[package]]
 category = "main"
-description = "An interpreter package for AIML, the Artificial Intelligence Markup Language"
-name = "aiml"
-optional = false
-python-versions = "*"
-version = "0.9.2"
-
-[package.dependencies]
-setuptools = "*"
-
-[[package]]
-category = "main"
 description = "ASCII Art Library For Python"
 name = "art"
 optional = false
@@ -409,6 +398,17 @@ version = "2.4.7"
 
 [[package]]
 category = "main"
+description = "An interpreter package for AIML, the Artificial Intelligence Markup Language"
+name = "python-aiml"
+optional = false
+python-versions = "*"
+version = "0.9.3"
+
+[package.dependencies]
+setuptools = "*"
+
+[[package]]
+category = "main"
 description = "World timezone definitions, modern and historical"
 name = "pytz"
 optional = false
@@ -570,14 +570,10 @@ dev = ["pytest", "pytest-timeout", "coverage", "tox", "sphinx", "pallets-sphinx-
 watchdog = ["watchdog"]
 
 [metadata]
-content-hash = "9857e6938905dbf86b8e3c9b0cfe703a95034066e9b44de49a8f89e21875e04c"
+content-hash = "bf40122280a4705fe0937a4a11e33ea059ca62dafb99f4a3161ce665f0dc96be"
 python-versions = "^3.8"
 
 [metadata.files]
-aiml = [
-    {file = "aiml-0.9.2-py2.py3-none-any.whl", hash = "sha256:1aad218e9bdbcfd51bd293095e1c578a09e392679888528aa4616fd3421c782c"},
-    {file = "aiml-0.9.2.zip", hash = "sha256:51d75d8ddedb9e315d85cbdbc82073a47066ef583c53b6ae16df8fb19ef17655"},
-]
 art = [
     {file = "art-5.1-py2.py3-none-any.whl", hash = "sha256:94b2f457dd10c20efe426eb79f752d03845cee80f262e00cbb4fa77dff768385"},
     {file = "art-5.1.tar.gz", hash = "sha256:380cb9a3bf97c6a3e6a90a7ab7d20b74aec0a1a4294f921ec3a8eb1057f37180"},
@@ -825,6 +821,9 @@ pyasn1-modules = [
 pyparsing = [
     {file = "pyparsing-2.4.7-py2.py3-none-any.whl", hash = "sha256:ef9d7589ef3c200abe66653d3f1ab1033c3c419ae9b9bdb1240a85b024efc88b"},
     {file = "pyparsing-2.4.7.tar.gz", hash = "sha256:c203ec8783bf771a155b207279b9bccb8dea02d8f0c9e5f8ead507bc3246ecc1"},
+]
+python-aiml = [
+    {file = "python-aiml-0.9.3.zip", hash = "sha256:f6954da1888b529121fe66a8cb1352b383c8ecd31e2bd9442ea46a38824e08c8"},
 ]
 pytz = [
     {file = "pytz-2021.1-py2.py3-none-any.whl", hash = "sha256:eb10ce3e7736052ed3623d49975ce333bcd712c7bb19a58b9e2089d4057d0798"},

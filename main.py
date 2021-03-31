@@ -42,7 +42,7 @@ MAIN_API_URL = "https://API.jagthefriend.repl.co/"
 
 
 @app.route('/')
-def main() -> str:
+def main() -> dict:
     """
     A main function
     which handles the main `index` page
@@ -74,7 +74,7 @@ def reddit(post, limit) -> dict:
     return reddit_api.supreddit(post=post, limit=limit)
 
 
-@app.route('/lyrics+<song>')
+@app.route('/lyrics+<string:song>')
 def lyrics(song) -> dict:
     """
     Gets the lyrics of a song
@@ -84,7 +84,7 @@ def lyrics(song) -> dict:
     return lyrics_api.song_lyrics(song)
 
 
-@app.route('/ascii_<text>')
+@app.route('/ascii_<string:text>')
 def ascii(text: str) -> dict:
     """
     Makes ascii art
@@ -104,7 +104,7 @@ def temp(place: str, unit: str) -> dict:
     return temperature_api.temp(city=place, unit=unit)
 
 
-@app.route('/length+<pl_id>')
+@app.route('/length+<string:pl_id>')
 def length(pl_id: str) -> dict:
     """
     Gets the length of playlist
@@ -164,4 +164,4 @@ def chatbot(text: str) -> dict:
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=6969, debug=True)

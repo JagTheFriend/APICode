@@ -22,16 +22,19 @@
 
 
 import aiml
-from prsaw import RandomStuff
+# from prsaw import RandomStuff
+# rs = RandomStuff()
 
 # setup
 aiml_kernel = aiml.Kernel()
-bot_brain = "API\\bot_brain.brn"
+bot_brain = "bot_brain.brn"
 
-aiml_kernel.bootstrap(brainFile=bot_brain)
-
-rs = RandomStuff()
-
+try:
+    # aiml_kernel.bootstrap(learnFiles="API/AI_Train_Data/std-startup.xml",commands="load aiml b")
+    # aiml_kernel.saveBrain("bot_brain.brn")
+    aiml_kernel.bootstrap(brainFile=bot_brain)
+except Exception:
+    pass
 
 def _ai(*, message: str = "Hello gamer") -> dict:
     """
@@ -39,13 +42,10 @@ def _ai(*, message: str = "Hello gamer") -> dict:
     :param message: The text the `AI` would process
     :return: Dictionary
     """
-    try:
-        return {"output": rs.get_ai_response(message)}
-    except Exception:  # some error did occur
-        return {"output": backup(message)}
+    return {"output": get_response(message)}
 
 
-def backup(message: str) -> str:
+def get_response(message: str) -> str:
     """
     This is a back up, just in case the first function fails.
     :return: String    
