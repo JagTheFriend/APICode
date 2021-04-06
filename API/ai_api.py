@@ -20,44 +20,12 @@
 # SOFTWARE.
 ################################################################################
 
-
-import aiml
-# from prsaw import RandomStuff
-# rs = RandomStuff()
-
-# setup
-aiml_kernel = aiml.Kernel()
-bot_brain = "bot_brain.brn"
-
-try:
-    # aiml_kernel.bootstrap(learnFiles="API/AI_Train_Data/std-startup.xml",commands="load aiml b")
-    # aiml_kernel.saveBrain("bot_brain.brn")
-    aiml_kernel.bootstrap(brainFile=bot_brain)
-except Exception:
-    pass
-
+import requests
 def _ai(*, message: str = "Hello gamer") -> dict:
     """
     Allow you to talk with an `AI` 
     :param message: The text the `AI` would process
     :return: Dictionary
     """
-    return {"output": get_response(message)}
-
-
-def get_response(message: str) -> str:
-    """
-    This is a back up, just in case the first function fails.
-    :return: String    
-    """
-    if not message:
-        return "Ask me anything"
-    # processing response
-    aiml_response = aiml_kernel.respond(message)
-
-    # we can't send an empty message, is the message empty?
-    if aiml_response == '':
-        return "whaaat ?"
-    # sending the correct response.
-    else:
-        return aiml_response
+    response = requests.get(f"https://api.pgamerx.com/ai/response?message={message}&?lanuage=en").text
+    return {"output": response[2:-2]}
