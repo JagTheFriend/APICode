@@ -63,7 +63,7 @@ SongName = "name of song"
 print(complex_api.lyrics(song=SongName))
 ```
 
-## Pixel Art:
+## Ascii Art:
 [Example:](https://API.jagthefriend.repl.co/ascii_hello)
 ```py
 from Complex_API import complex_api
