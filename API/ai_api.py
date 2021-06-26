@@ -21,11 +21,23 @@
 ################################################################################
 
 import requests
+import os
+import json
+
+AI_KEY = os.environ.get("AI")
+
+URL = "https://api.pgamerx.com/v3/ai/response?message=encodeURIComponent('{message}')&type=stable"
+header = {'x-api-key': AI_KEY}
+
 def _ai(*, message: str = "Hello gamer") -> dict:
     """
     Allow you to talk with an `AI` 
     :param message: The text the `AI` would process
     :return: Dictionary
     """
-    response = requests.get(f"https://api.pgamerx.com/ai/response?message={message}&?lanuage=en").text
-    return {"output": response[2:-2]}
+    response = requests.get(
+        URL.format(message=message),
+        headers=header
+    ).json()[0]["message"]
+    # response = json.loads(response)[0]["message"]
+    return {"output": response}#URL.format(message=message)}
