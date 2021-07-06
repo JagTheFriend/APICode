@@ -23,7 +23,7 @@ In order to use the API,
 you need to first download [this module (`pip install Complex-API`)](https://pypi.org/project/Complex-API/)
 
 ## Compile API:
-[Example:](https://github.com/JagTheFriend/Complex-API/pulls)
+[Example:](https://api.jagthefriend.repl.co/compile=java_class%20Compiler%7B%20public%20static%20void%20main(String[]%20args)%7B%20System.out.println(%22This%20works%22);%20%7D%20%7D)
 ```py
 from Complex_API import complex_api
 # run python
